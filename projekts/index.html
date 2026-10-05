@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="IT mācību centra mājaslapa" >
     <title>IT mācību centrs</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -21,25 +21,27 @@
             <h1 class="title">IT mācību centrs</h1>
             <p class="description">jebkāda veida IT pakalpojumu mācības, kas būs nepieciešamas jebkurā dzīves situācijā</p>
         </section>
-        <section id="courses" class="cards">
+        <section id="courses">
             <h2>Kursi</h2>
-            <div class="card">
-                <img src="#" />
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tenetur velit iusto iste accusamus! Laborum.</p>  
-                <a href="#" class="card-link">Uzzināt vairāk</a>
-            </div>
-            <div class="card">
-                <img src="#" />
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tenetur velit iusto iste accusamus! Laborum.</p>  
-                <a href="#" class="card-link">Uzzināt vairāk</a>
-            </div>
-            <div class="card">
-                <img src="#" />
-                <h3 class="card-title">Lorem, ipsum dolor.</h3>
-                <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tenetur velit iusto iste accusamus! Laborum.</p>  
-                <a href="#" class="card-link">Uzzināt vairāk</a>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://picsum.photos/800/400" />
+                    <h3 class="card-title">Lorem, ipsum dolor.</h3>
+                    <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tenetur velit iusto iste accusamus! Laborum.</p>  
+                    <a href="#" class="card-link">Uzzināt vairāk</a>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/800/400" />
+                    <h3 class="card-title">Lorem, ipsum dolor.</h3>
+                    <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tenetur velit iusto iste accusamus! Laborum.</p>  
+                    <a href="#" class="card-link">Uzzināt vairāk</a>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/800/400" />
+                    <h3 class="card-title">Lorem, ipsum dolor.</h3>
+                    <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tenetur velit iusto iste accusamus! Laborum.</p>  
+                    <a href="#" class="card-link">Uzzināt vairāk</a>
+                </div>
             </div>
         </section>
         <section id="about">
@@ -47,16 +49,43 @@
             <p class="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nemo?
             </p>
-            <ol>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-            </ol>
+            <article>
+                <h4>Article 1</h4>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ol>
+            </article>
+            <article>
+                <h4>Aticle 2</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </article>
+            <article class="list-style-circle">
+                <h4>Article 3</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </article>
+
+            <br>
+            <h3>Kursu grafiks:</h3>
             <table>
                 <thead>
                     <tr>
+                        <th></th>
                         <th>
                             Kurss 1
                         </th>
@@ -73,21 +102,24 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td>9:00</td>
                         <td>Dizains</td>
                         <td>Programmēšana</td>
-                        <td>sistēmu administrēšana</td>
+                        <td>Sistēmu administrēšana</td>
                         <td>Lodēšana</td>
                     </tr>
                     <tr>
+                        <td>11:00</td>
                         <td>Dizains</td>
                         <td>Programmēšana</td>
-                        <td>sistēmu administrēšana</td>
+                        <td>Sistēmu administrēšana</td>
                         <td>Lodēšana</td>
                     </tr>
                     <tr>
+                        <td>13:00</td>
                         <td>Dizains</td>
                         <td>Programmēšana</td>
-                        <td>sistēmu administrēšana</td>
+                        <td>Sistēmu administrēšana</td>
                         <td>Lodēšana</td>
                     </tr>
                 </tbody>
@@ -98,11 +130,11 @@
             <h2>Sazinies ar mums</h2>
             <form action="post">
                 <label for="name">Vārds</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" required>
                 <label for="email">E-pasts</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" placeholder="name@domain.com" required>
                 <label for="phone">Telefons</label>
-                <input type="text" name="phone" id="phone">
+                <input type="text" name="phone" id="phone" placeholder="+371 xxxxxxxx" required>
                 <label for="course">Kurss</label>
                 <select name="course" id="course">
                     <option value="">--</option>
@@ -111,11 +143,13 @@
                     <option value="3">Kurss 3</option>
                     <option value="4">Kurss 4</option>
                 </select>
-                <label for="comment">Vārds</label>
-                <textare name="comment" id="comment" rows="5">
+                <label for="comment">Komentārs</label>
+                <textarea name="comment" id="comment" rows="5"></textarea>
                 <label for="agree">Piekrītu <a href="#" target="_blank">datu apstrādei</a></label>
                 <input type="checkbox" name="agree" id="agree">
-                <button type="submit" name="name" id="name">
+                <br>
+                <br>
+                <button type="submit" name="name" id="name">Nosūtīt</button>
             </form>
         </section>
 
