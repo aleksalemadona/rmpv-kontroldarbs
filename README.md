@@ -1,10 +1,10 @@
 # rmpv-kontroldarbs
 04.10.2026.
-html_css_kontroldarbs
+Projekts
 Responsīva mājaslapa "IT mācību centrs"
 
 03.11.2026.
-php_pamati_kontroldarbs
-Kursu pieteikuma kalkulators
+kursu-kalkulators
+Kursu pieteikuma kalkulators - PHP pamati
 
 Autors: Aleksejs Aleksejevs
