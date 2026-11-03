@@ -17,13 +17,13 @@
     <table>
         <tr>
             <?php
-                foreach ($kursi as $kursa_kods => $kursa_dati){
+            foreach ($kursi as $kursa_kods => $kursa_dati){
             ?>
             <th>
                 <?= $kursa_dati['nosaukums']; ?>
             </th>
             <?php
-                }
+            }
             ?>      
         </tr>
         <tr>
@@ -39,6 +39,35 @@
     </table>
 
     <p>Ir pieejami <?= count($kursi) ?> dažādi kursi. </p>
+
+    <h2>Aizpildi formu</h2>
+
+    <form action="POST">
+        <input id="vards" type="text" name="vards" placeholder="Jūsu vārds">
+        <input id="epasts" type="email" name="epasts" placeholder="Jūsu ēpasts">
+        <select id="kurss" name="kurss">
+            <?php
+            foreach ($kursi as $kursa_kods => $kursa_dati){
+            ?>
+                <option value="<?= $kursa_kods; ?>">
+                    <?= $kursa_dati['nosaukums']; ?>
+                </option>
+            <?php
+            }
+            ?>  
+        </select>
+        <select id="skaits" name="skaits">
+            <?php
+            for($i = 0; $i <= $max_dalibnieku_skaits; $i++){
+            ?>
+                <option value="<?= $i; ?>"><?= $i; ?>
+            <?php
+            }
+            ?>
+        </select>
+
+        <button type="submit">Iesniegt</button>
+    </form>
 
 </body>
 <footer></footer>

@@ -7,4 +7,6 @@ $kursi = [
     'git'  => ['nosaukums' => 'Git un GitHub', 'cena' => 20.00]
 ];
 
+$max_dalibnieku_skaits = 5;
+
 // var_dump($kursi);
