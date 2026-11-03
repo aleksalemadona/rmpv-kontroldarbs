@@ -8,5 +8,5 @@ $kursi = [
 ];
 
 $max_dalibnieku_skaits = 5;
-
-// var_dump($kursi);
+$atlaide_no = 3;
+$atlaide = 10;

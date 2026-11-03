@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 
     require_once('data.php');
-    require_once('index.php');
+    require_once('functions.php');
 
     ?>
 
@@ -36,7 +36,7 @@ error_reporting(E_ALL);
             foreach ($kursi as $kursa_kods => $kursa_dati){
             ?>
             <td>
-                <?= $kursa_dati['cena']; ?> Eur
+                <?= number_format($kursa_dati['cena'],2); ?> Eur
             </td>
             <?php
             }
@@ -53,6 +53,7 @@ error_reporting(E_ALL);
     $epasts = "";
     $kurss = "";
     $skaits = 0;
+    $kursa_cena = 0;
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -75,19 +76,36 @@ error_reporting(E_ALL);
 
 
         $skaits_ok = filter_var($skaits, FILTER_VALIDATE_INT, [
-            "options" => ["min_range" => 1, "max_range" => 5]
+            "options" => ["min_range" => 1, "max_range" => $max_dalibnieku_skaits]
         ]);
         if ($skaits_ok === false) {
             $errors["skaits"] = "Nav izvēlēts atļautais dalībnieku skaits";
         }
+
+        if ($errors === []) {
+    
+            foreach ($kursi as $kursa_kods => $kursa_dati){
+                if ($kursa_kods == $kurss){
+                    $kursa_cena = $kursa_dati['cena'];
+                    $kursa_nosaukums = $kursa_dati['nosaukums'];
+                }
+            }
+    
+            $kursu_summa = (kursuSumma($kursa_cena, $skaits, $atlaide_no, $atlaide));
+
+            echo $vards;
+            echo $epasts;
+            echo $kursa_nosaukums;
+            echo $skaits;
+            echo number_format($kursu_summa['starpsumma'],2);
+            echo number_format($kursu_summa['atlaide'],2);
+            echo number_format($kursu_summa['gala_summa'],2);
+            
+        }else{
+            var_dump($errors);
+        }
     }
 
-    if ($errors === []) {
-        var_dump("viss ok");
-        
-    }else{
-        var_dump($errors);
-    }
 
     ?>
 
